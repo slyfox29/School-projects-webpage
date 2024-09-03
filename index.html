@@ -32,6 +32,7 @@
             font-weight: 600;
             color: #ffffff;
             margin: 0;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
         }
 
         header p {
@@ -47,6 +48,9 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
         }
 
         .project {
@@ -56,15 +60,31 @@
             padding: 30px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
-            overflow: hidden;
             cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .project:hover::before {
+            opacity: 1;
+            transform: scale(1);
         }
 
         .project:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
 
@@ -102,7 +122,7 @@
             border-top: 1px solid #E0E0E5;
             margin-top: 60px;
             opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
+            animation: fadeIn 1.5s ease-out 1s forwards;
         }
 
         footer p {
@@ -139,6 +159,16 @@
                 opacity: 1;
             }
         }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+
     </style>
 </head>
 <body>
