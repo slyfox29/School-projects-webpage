@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Quakenbush's Projects</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F7;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #E0E0E5;
+            transform: translateY(-20px);
+            opacity: 0;
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #333333;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666666;
+            margin: 10px 0 0;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h2 {
+            font-size: 1.6em;
+            margin: 0 0 10px 0;
+            color: #0071E3;
+            font-weight: 500;
+        }
+
+        .project h2 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .project h2 a:hover {
+            color: #005BB5;
+        }
+
+        .project p {
+            margin: 0;
+            color: #555555;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888888;
+            border-top: 1px solid #E0E0E5;
+            margin-top: 60px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Henry Quakenbush's  Projects</h1>
+    <p>Explore my collection of my essay projects below. Click on a title to view the full content.</p>
+</header>
+
+<div class="content">
+    <div class="project">
+        <h2><a href="formal_essay/is_tesla_worth_the_hype.html">Is Tesla Worth the Hype?</a></h2>
+        <p>Posted on: September 1, 2024</p>
+        <p>Formal Essay with a partner</p>
+    </div>
+
+    <div class="project">
+        <h2><a href="geography/australia_overview.html ">Australia Overview&nbsp; &nbsp;</a></h2>
+        <p>Posted on: March 1, 2024</p>
+        <p>Essay on my Contry for a United Nations Simulation&nbsp; &nbsp;</p>
+    </div>
+
+    <!-- Add more projects as needed -->
+
+</div>
+
+<footer>
+    <p>© 2024 Henry Quakenbush. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
